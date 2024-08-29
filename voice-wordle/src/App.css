@@ -2,13 +2,24 @@
   text-align: center;
   padding: 20px;
   font-family: 'Arial', sans-serif;
+  background-image: url('https://img.freepik.com/free-photo/abstract-bokeh-blur-lights-night-street-city-background_1421-465.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(1, 1fr); /* Single column for vertical alignment */
   gap: 10px;
   margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
 }
 
 .cell {
@@ -22,6 +33,7 @@
   border: 2px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
+  color: black;
   transition: background-color 0.3s ease;
 }
 
@@ -40,17 +52,8 @@
   justify-content: center;
 }
 
-.header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.result {
-  text-align: center;
-}
-
-button {
-  padding: 10px 20px;
+.voice-button {
+  padding: 15px 30px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
@@ -58,36 +61,59 @@ button {
   color: white;
   cursor: pointer;
   margin-top: 20px;
+  animation: bounce 2s infinite;
 }
 
-button:hover {
+.voice-button:hover {
   background-color: #0056b3;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Additional responsiveness */
 @media (max-width: 600px) {
   .grid {
-    grid-template-columns: repeat(5, 40px);
+    grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
   }
 
   .cell {
     width: 40px;
     height: 40px;
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  .header h1 {
-    font-size: 1.5rem;
+  .voice-button {
+    padding: 12px 25px;
+    font-size: 14px;
   }
-
-  button {
-    width: 100%;
-  }
-}
-
-.voice-button {
-  background-color: #28a745;
-}
-
-.voice-button:hover {
-  background-color: #218838;
 }

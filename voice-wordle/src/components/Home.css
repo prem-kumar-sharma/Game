@@ -1,0 +1,70 @@
+.home {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/premium-photo/golden-shiny-bokeh-lights-black-background-blurred-lights-holiday-party-birthday-background_183577-409.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .rules {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  .rules ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .rules li {
+    margin-bottom: 10px;
+  }
+  
+  .start-button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .start-button:hover {
+    background-color: #218838;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
