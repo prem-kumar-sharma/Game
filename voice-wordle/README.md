@@ -7,19 +7,16 @@
 ## Game Screenshots
 
 ### Welcome Screen
-![Welcome Screen](https://your-image-link-here)
-
-### Game Rules
-![Game Rules](https://your-image-link-here)
+![Welcome Screen](https://drive.google.com/file/d/1zg8BdHIiH_3kEOLQHpEE27ZYjAeJzM60/view?usp=drivesdk)
 
 ### Game Screen
-![Game Screen](https://your-image-link-here)
+![Game Screen](https://drive.google.com/file/d/1zh-meNPFfQJiT2Y6Ec76yXVBieuR82rs/view?usp=drivesdk)
 
 ### Game Win
-![Game Win](https://your-image-link-here)
+![Game Win](https://drive.google.com/file/d/1zioA_yDoAIB_eQoQx-b8XfZIwqLH4W2c/view?usp=drivesdk)
 
 ### Game Over
-![Game Over](https://your-image-link-here)
+![Game Over](https://drive.google.com/file/d/1zmVWQdiYLSmiKo1ZT-0q2lf8LipqmhxX/view?usp=drivesdk)
 
 ## Game Features
 
