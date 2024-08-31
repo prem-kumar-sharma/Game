@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Voice Wordle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Voice Wordle** is a fun and interactive word-guessing game that challenges your vocabulary skills using voice commands.
 
-## Available Scripts
+## Play Here: https://neon-queijadas-a83e07.netlify.app/
 
-In the project directory, you can run:
+## Game Screenshots
 
-### `npm start`
+### Welcome Screen
+![Welcome Screen](https://github.com/user-attachments/assets/fd20be85-ab3d-4cb2-b1e1-659e5a1fadc2)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Game Screen
+![Game Screen](https://github.com/user-attachments/assets/6a8c0e1c-ec29-4a31-8ccf-efb962046f95)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Game Win
+![Game Win](https://github.com/user-attachments/assets/acdba6f3-97f3-4821-aebf-c16e394d3229)
 
-### `npm test`
+### Game Over
+![Game Over](https://github.com/user-attachments/assets/e322eb84-a949-4c84-b400-fe3f49b8d740)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Game Features
 
-### `npm run build`
+- **Voice Input:** Use voice commands to guess the word.
+- **6 Attempts:** Guess the word in 6 attempts or less.
+- **Color Indicators:** 
+  - **Green:** Correct letter in the correct position.
+  - **Yellow:** Correct letter in the wrong position.
+  - **Gray:** Incorrect letter.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Play
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Start the game by clicking "Let's Play!" on the welcome screen.
+2. The game will prompt you to guess a 5-letter word using voice commands.
+3. The game will provide feedback after each guess with color indicators.
+4. You have 6 attempts to guess the correct word.
+5. If you guess correctly, you win! If not, the game will reveal the correct word.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- React.js
+- HTML/CSS
+- Netlify for deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install the required dependencies.
+4. Run `npm start` to start the development server.
+5. To deploy, run `npm run build` and host the `build` folder on Netlify or any static hosting provider.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to open issues or submit pull requests if you have any improvements or bug fixes.
