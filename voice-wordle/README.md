@@ -7,17 +7,16 @@
 ## Game Screenshots
 
 ### Welcome Screen
-![Welcome Screen](![![image](![Screenshot_20240831_014043](https://github.com/user-attachments/assets/fd20be85-ab3d-4cb2-b1e1-659e5a1fadc2)
-)
+![Welcome Screen](https://github.com/user-attachments/assets/fd20be85-ab3d-4cb2-b1e1-659e5a1fadc2)
 
 ### Game Screen
-![Game Screen](![Screenshot_20240831_014048](https://github.com/user-attachments/assets/6a8c0e1c-ec29-4a31-8ccf-efb962046f95)
+![Game Screen](https://github.com/user-attachments/assets/6a8c0e1c-ec29-4a31-8ccf-efb962046f95)
 
 ### Game Win
-![Game Win](![Screenshot_20240831_014650](https://github.com/user-attachments/assets/acdba6f3-97f3-4821-aebf-c16e394d3229)
+![Game Win](https://github.com/user-attachments/assets/acdba6f3-97f3-4821-aebf-c16e394d3229)
 
 ### Game Over
-![Game Over](![Screenshot_20240831_014029](https://github.com/user-attachments/assets/e322eb84-a949-4c84-b400-fe3f49b8d740)
+![Game Over](https://github.com/user-attachments/assets/e322eb84-a949-4c84-b400-fe3f49b8d740)
 
 ## Game Features
 
