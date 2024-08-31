@@ -19,10 +19,12 @@ function App() {
     recognition.lang = 'en-US';
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
+    recognition.continuous = true; // Keep listening until manually stopped
 
     recognition.onresult = (event) => {
       const guess = event.results[0][0].transcript.trim().toUpperCase();
       if (guess.length === 5) {
+        recognition.stop(); // Stop listening once a valid guess is detected
         checkGuess(guess);
       } else {
         alert("Please speak a 5-letter word.");
@@ -31,6 +33,14 @@ function App() {
 
     recognition.onerror = (event) => {
       console.error(`Error occurred: ${event.error}`);
+      alert("An error occurred with the voice recognition. Please try again.");
+      recognition.stop(); // Stop to prevent it from hanging
+    };
+
+    recognition.onspeechend = () => {
+      // If no speech detected for some time, stop the recognition
+      recognition.stop();
+      alert("No voice detected. Please try again.");
     };
 
     recognition.start();
