@@ -7,7 +7,8 @@
 ## Game Screenshots
 
 ### Welcome Screen
-![Welcome Screen](![![image](https://github.com/user-attachments/assets/48757365-c29d-4f0c-94e6-0203fb540f79)
+![Welcome Screen](![![image](![Screenshot_20240831_014043](https://github.com/user-attachments/assets/fd20be85-ab3d-4cb2-b1e1-659e5a1fadc2)
+)
 
 ### Game Screen
 ![Game Screen](![Screenshot_20240831_014048](https://github.com/user-attachments/assets/6a8c0e1c-ec29-4a31-8ccf-efb962046f95)
