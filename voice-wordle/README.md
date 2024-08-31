@@ -7,16 +7,20 @@
 ## Game Screenshots
 
 ### Welcome Screen
-![Welcome Screen](https://drive.google.com/file/d/1zg8BdHIiH_3kEOLQHpEE27ZYjAeJzM60/view?usp=drivesdk)
+![Welcome Screen](![Screenshot_20240831_014043](https://github.com/user-attachments/assets/3c14bd63-bda2-4cd6-9973-dde2c7218cc8)
+)
 
 ### Game Screen
-![Game Screen](https://drive.google.com/file/d/1zh-meNPFfQJiT2Y6Ec76yXVBieuR82rs/view?usp=drivesdk)
+![Game Screen](![Screenshot_20240831_014048](https://github.com/user-attachments/assets/6a8c0e1c-ec29-4a31-8ccf-efb962046f95)
+)
 
 ### Game Win
-![Game Win](https://drive.google.com/file/d/1zioA_yDoAIB_eQoQx-b8XfZIwqLH4W2c/view?usp=drivesdk)
+![Game Win](![Screenshot_20240831_014650](https://github.com/user-attachments/assets/acdba6f3-97f3-4821-aebf-c16e394d3229)
+)
 
 ### Game Over
-![Game Over](https://drive.google.com/file/d/1zmVWQdiYLSmiKo1ZT-0q2lf8LipqmhxX/view?usp=drivesdk)
+![Game Over](![Screenshot_20240831_014029](https://github.com/user-attachments/assets/e322eb84-a949-4c84-b400-fe3f49b8d740)
+)
 
 ## Game Features
 
