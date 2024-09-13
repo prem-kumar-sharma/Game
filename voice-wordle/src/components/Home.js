@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
+  const [name, setName] = useState('');
+  const [gender, setGender] = useState('female');
+  const [inputMode, setInputMode] = useState('voice'); 
   const navigate = useNavigate();
 
   const startGame = () => {
-    navigate('/play');
+    if (name) {
+      navigate('/play', { state: { name, gender, inputMode } });
+    } else {
+      alert('Please enter your name');
+    }
   };
 
   return (
@@ -15,16 +22,56 @@ const Home = () => {
         <div className="content">
           <h1 className="title">Welcome to Voice Wordle</h1>
           <p className="description">Test your word-guessing skills with voice commands!</p>
-          <div className="rules">
-            <h2>Game Rules</h2>
-            <ul>
-              <li>Guess the word in 6 attempts.</li>
-              <li>Use voice commands to input your guesses.</li>
-              <li>Green indicates correct letters in the right position.</li>
-              <li>Yellow indicates correct letters in the wrong position.</li>
-              <li>Gray indicates incorrect letters.</li>
-            </ul>
+
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+
+          <div className="gender-selection">
+            <label>
+              <input
+                type="radio"
+                value="male"
+                checked={gender === 'male'}
+                onChange={() => setGender('male')}
+              />
+              Male
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="female"
+                checked={gender === 'female'}
+                onChange={() => setGender('female')}
+              />
+              Female
+            </label>
           </div>
+
+          <div className="input-mode-selection">
+            <label>
+              <input
+                type="radio"
+                value="voice"
+                checked={inputMode === 'voice'}
+                onChange={() => setInputMode('voice')}
+              />
+              Voice Input
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="typing"
+                checked={inputMode === 'typing'}
+                onChange={() => setInputMode('typing')}
+              />
+              Typing Input
+            </label>
+          </div>
+
           <button className="start-button" onClick={startGame}>Let's Play!</button>
         </div>
       </div>
