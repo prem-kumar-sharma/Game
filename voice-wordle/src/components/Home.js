@@ -4,13 +4,13 @@ import './Home.css';
 
 const Home = () => {
   const [name, setName] = useState('');
-  const [gender, setGender] = useState('female');
-  const [inputMode, setInputMode] = useState('voice'); 
+  const [inputMode, setInputMode] = useState('voice');
+  const [voiceType, setVoiceType] = useState('1');
   const navigate = useNavigate();
 
   const startGame = () => {
     if (name) {
-      navigate('/play', { state: { name, gender, inputMode } });
+      navigate('/play', { state: { name, inputMode, voiceType } });
     } else {
       alert('Please enter your name');
     }
@@ -30,28 +30,8 @@ const Home = () => {
             onChange={(e) => setName(e.target.value)}
           />
 
-          <div className="gender-selection">
-            <label>
-              <input
-                type="radio"
-                value="male"
-                checked={gender === 'male'}
-                onChange={() => setGender('male')}
-              />
-              Male
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="female"
-                checked={gender === 'female'}
-                onChange={() => setGender('female')}
-              />
-              Female
-            </label>
-          </div>
-
           <div className="input-mode-selection">
+            <p>Select Input Mode:</p>
             <label>
               <input
                 type="radio"
@@ -72,7 +52,42 @@ const Home = () => {
             </label>
           </div>
 
-          <button className="start-button" onClick={startGame}>Let's Play!</button>
+          {inputMode === 'voice' && (
+            <div className="voice-selection">
+              <p>Select Voice Type:</p>
+              <label>
+                <input
+                  type="radio"
+                  value="1"
+                  checked={voiceType === '1'}
+                  onChange={() => setVoiceType('1')}
+                />
+                Female Voice 1
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="2"
+                  checked={voiceType === '2'}
+                  onChange={() => setVoiceType('2')}
+                />
+                Female Voice 2
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="3"
+                  checked={voiceType === '3'}
+                  onChange={() => setVoiceType('3')}
+                />
+                Male Voice 3
+              </label>
+            </div>
+          )}
+
+          <button className="start-button" onClick={startGame}>
+            Let's Play!
+          </button>
         </div>
       </div>
     </div>

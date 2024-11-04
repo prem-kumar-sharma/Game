@@ -52,6 +52,21 @@
   justify-content: center;
 }
 
+.start-game-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-game-button:hover {
+  background-color: #218838;
+}
+
 .voice-button {
   padding: 15px 30px;
   font-size: 16px;
@@ -115,5 +130,10 @@
   .voice-button {
     padding: 12px 25px;
     font-size: 14px;
+  }
+
+  .start-game-button {
+    padding: 12px 25px;
+    font-size: 16px;
   }
 }

@@ -1,118 +1,116 @@
+/* Main home styling */
 .home {
-    position: relative;
-    height: 100vh;
-    background-image: url('https://files.123freevectors.com/wp-content/original/152582-cool-blue-alphabet-background.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 50px;
-    border-radius: 15px;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  .title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-  
-  .rules {
-    font-size: 1.2rem;
-    text-align: left;
-  }
-  
-  .rules ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .rules li {
-    margin-bottom: 10px;
-  }
-  
-  .start-button {
-    background-color: #28a745;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 30px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .start-button:hover {
-    background-color: #218838;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+  position: relative;
+  height: 100vh;
+  background-image: url('https://files.123freevectors.com/wp-content/original/152582-cool-blue-alphabet-background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
 
-  .home {
-    height: 100vh;
-    background-image: url('https://files.123freevectors.com/wp-content/original/152582-cool-blue-alphabet-background.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
+/* Overlay for content */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Title and description styling */
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Input styling */
+input[type="text"] {
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 1.2rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Mode selection buttons */
+.game-mode-selection {
+  margin: 20px 0;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mode-button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #1d4f91;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-button.active,
+.mode-button:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Input mode and voice selection styling */
+.input-mode-selection,
+.voice-selection,
+.gender-selection {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.input-mode-selection p,
+.voice-selection p {
+  margin-bottom: 10px;
+}
+
+/* Start button styling */
+.start-button {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 50px;
-    border-radius: 15px;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
+  to {
+    opacity: 1;
   }
-  
-  input {
-    padding: 10px;
-    margin: 15px 0;
-    font-size: 1rem;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .gender-selection, .input-mode-selection {
-    margin: 15px 0;
-  }
-  
-  .start-button {
-    background-color: #28a745;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .start-button:hover {
-    background-color: #218838;
-  }
-  
+}
