@@ -1,0 +1,206 @@
+.cutscene-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1000;
+  }
+  
+  .scene-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: -1;
+    backdrop-filter: blur(5px);
+  }
+  
+  .character-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  
+  .character {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    bottom: 20px;
+    transition: all 0.5s ease;
+    animation: characterEntrance 0.8s ease-out;
+  }
+  
+  .character.left {
+    left: 100px;
+  }
+  
+  .character.right {
+    right: 100px;
+  }
+  
+  .character.center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .character-name {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 10px;
+  }
+  
+  .dialogue-box {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    animation: dialogueBoxEntrance 0.5s ease-out;
+  }
+  
+  .speaker-name {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    background: linear-gradient(45deg, #4a90e2, #63b3ed);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .dialogue-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    min-height: 60px;
+  }
+  
+  .typing-cursor {
+    animation: cursorBlink 0.8s infinite;
+    opacity: 0;
+  }
+  
+  .continue-prompt {
+    text-align: right;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    animation: promptPulse 1.5s infinite;
+  }
+  
+  .dialogue-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+  }
+  
+  .control-button {
+    background: linear-gradient(45deg, #4a90e2, #63b3ed);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .control-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+  }
+  
+  .control-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Character Emotions */
+  .character.welcoming {
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+  }
+  
+  .character.concerned {
+    filter: drop-shadow(0 0 10px rgba(255, 99, 71, 0.5));
+  }
+  
+  .character.joyful {
+    filter: drop-shadow(0 0 10px rgba(144, 238, 144, 0.5));
+  }
+  
+  .character.mysterious {
+    filter: drop-shadow(0 0 10px rgba(147, 112, 219, 0.5));
+  }
+  
+  /* Animations */
+  @keyframes characterEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes dialogueBoxEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes cursorBlink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  @keyframes promptPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .character {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .character.left {
+      left: 20px;
+    }
+  
+    .character.right {
+      right: 20px;
+    }
+  
+    .dialogue-box {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .dialogue-text {
+      font-size: 1rem;
+    }
+  }

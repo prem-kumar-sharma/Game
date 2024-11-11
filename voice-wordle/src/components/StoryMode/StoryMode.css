@@ -1,0 +1,260 @@
+.story-mode {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .magical-realm {
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+  }
+  
+  .realm-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Header Section */
+  .story-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .return-portal {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .return-portal:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .player-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .player-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffeb3b;
+  }
+  
+  .level-indicator {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Story Scene */
+  .story-scene {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .dialogue-box {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    animation: glowPulse 2s infinite alternate;
+  }
+  
+  .dialogue-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    animation: textFade 0.5s ease-in;
+  }
+  
+  /* Game Area */
+  .game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .spell-cast-button {
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.3);
+  }
+  
+  .spell-cast-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.5);
+  }
+  
+  .scroll-input {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .magical-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .magical-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .cast-button {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cast-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+  }
+  
+  .magical-attempts {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+  
+  /* Victory Scene */
+  .victory-scene {
+    text-align: center;
+    padding: 2rem;
+    animation: celebrationPulse 2s infinite alternate;
+  }
+  
+  .victory-scene h2 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  }
+  
+  .continue-button {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  /* Defeat Scene */
+  .defeat-scene {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .defeat-scene h2 {
+    color: #ff5722;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+  }
+  
+  .retry-button {
+    background: linear-gradient(45deg, #ff5722, #f44336);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes glowPulse {
+    from {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+  @keyframes textFade {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes celebrationPulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .realm-content {
+      padding: 10px;
+    }
+  
+    .scroll-input {
+      flex-direction: column;
+    }
+  
+    .cast-button {
+      width: 100%;
+    }
+  }
+  
+  /* Grid Overrides - if needed */
+  .game-area .grid {
+    margin: 2rem auto;
+  }

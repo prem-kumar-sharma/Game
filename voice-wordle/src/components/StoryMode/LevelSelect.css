@@ -1,0 +1,210 @@
+.level-select-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  
+  .level-map {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .magical-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .floating-islands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .level-island {
+    width: 200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .level-island:nth-child(odd) {
+    transform: translateX(-100px);
+  }
+  
+  .level-island:nth-child(even) {
+    transform: translateX(100px);
+  }
+  
+  .level-island.unlocked:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .island-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .level-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #FFD700;
+  }
+  
+  .level-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .level-character {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+  }
+  
+  .difficulty-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.2);
+    margin-top: 5px;
+  }
+  
+  .magical-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);
+    animation: pulse 2s ease-in-out infinite;
+    z-index: 0;
+  }
+  
+  .lock-icon {
+    font-size: 2rem;
+    margin-top: 10px;
+    opacity: 0.5;
+  }
+  
+  .path-to-next {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .path-to-next.unlocked {
+    background: linear-gradient(to bottom, #FFD700, transparent);
+  }
+  
+  .level-info {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+  }
+  
+  .player-progress {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    transition: width 0.3s ease;
+  }
+  
+  .progress-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .return-button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .return-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFD700;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFD700;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .level-island {
+      width: 160px;
+    }
+  
+    .level-island:nth-child(odd),
+    .level-island:nth-child(even) {
+      transform: none;
+    }
+  }
