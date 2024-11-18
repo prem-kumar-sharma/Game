@@ -2,7 +2,7 @@
 
 **Voice Wordle** is a fun and interactive word-guessing game that challenges your vocabulary skills using voice commands.
 
-## Play Here: https://neon-queijadas-a83e07.netlify.app/
+## Play Here: [https://neon-queijadas-a83e07.netlify.app/](https://comfy-stroopwafel-746730.netlify.app/)
 
 ## Game Screenshots
 
